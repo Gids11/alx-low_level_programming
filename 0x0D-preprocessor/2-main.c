@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	printf("Name of current input file is: %s\n", __FILE__);
+	printf("%s\n", __FILE__);
 	return (0);
 }
