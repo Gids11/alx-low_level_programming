@@ -19,7 +19,24 @@ list_t *add_node(list_t **head, const char *str)
 		addednode->next = NULL;
 	addednode->next = *head;
 	addednode_.str = strdup(str);
-	addednode->len = len(str);
+	addednode->len = slen(str);
 	*head = addednode;
 	return (*head);
+}
+
+/**
+ * slen - getting length of string
+ * @string: the string
+ *
+ * Return: the length
+ */
+int slen(const char *string)
+{
+	int a;
+
+	if (string == NULL)
+		return (0);
+	for (a = 0; string[a] != '\0'; a++)
+		;
+	return (a);
 }
