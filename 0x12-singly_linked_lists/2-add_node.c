@@ -1,4 +1,7 @@
 #include "lists.h"
+int slen(const char *string);
+list_t *add_node(list_t **head, const char *str);
+
 /**
  * *add_node - adding a new node to a linked list
  * @head: first node
@@ -19,7 +22,7 @@ list_t *add_node(list_t **head, const char *str)
 		addednode->next = NULL;
 	addednode->next = *head;
 	addednode_.str = strdup(str);
-	addednode->len = slen(str);
+	addednode->slen = slen(str);
 	*head = addednode;
 	return (*head);
 }
