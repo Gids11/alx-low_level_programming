@@ -1,5 +1,5 @@
 #include "lists.h"
-int slen(const char *string);
+int slen(const char *str);
 list_t *add_node(list_t **head, const char *str);
 
 /**
@@ -21,7 +21,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (*head == NULL)
 		addednode->next = NULL;
 	addednode->next = *head;
-	addednode_.str = strdup(str);
+	addednode->str = strdup(str);
 	addednode->slen = slen(str);
 	*head = addednode;
 	return (*head);
@@ -33,13 +33,13 @@ list_t *add_node(list_t **head, const char *str)
  *
  * Return: the length
  */
-int slen(const char *string)
+int slen(const char *str)
 {
 	int a;
 
-	if (string == NULL)
+	if (str == NULL)
 		return (0);
-	for (a = 0; string[a] != '\0'; a++)
+	for (a = 0; str[a] != '\0'; a++)
 		;
 	return (a);
 }
