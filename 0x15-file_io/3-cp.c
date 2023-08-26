@@ -122,7 +122,7 @@ int write_(char *buff, int to_f, int read_, char *f_to)
 {
 	int a;
 
-	for (a = 0;  < read_; a++)
+	for (a = 0; < read_; a++)
 	{
 		if (write(to_f, &buff[a], 1) == -1)
 		{
