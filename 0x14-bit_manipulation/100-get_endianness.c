@@ -14,3 +14,4 @@ int get_endianness(void)
 	if_big = (int) (((char *)&a)[0]);
 	return (if_big);
 }
+

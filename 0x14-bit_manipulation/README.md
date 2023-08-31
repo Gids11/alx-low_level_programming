@@ -1,1 +1,1 @@
-Practicing manipulating bits with C
+Bit Manipulation in C programming
