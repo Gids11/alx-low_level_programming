@@ -63,12 +63,12 @@ int open_(char *f_from, char *f_to)
 	read_file_(from_f, to_f, f_from, f_to);
 	if (close(from_f) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close f %d\n", from_f);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_f);
 		exit(100);
 	}
 	if (close(to_f) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close f %d\n", to_f);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_f);
 		exit(100);
 	}
 	return (0);
